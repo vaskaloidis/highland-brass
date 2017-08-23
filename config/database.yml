@@ -1,0 +1,26 @@
+
+development: &default
+  database: highland-brass-dev
+  adapter: postgresql
+  pool: 10
+  host: localhost
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: highland-brass-dev
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: highland-brass-test
+
+production:
+  <<: *default
+  database: highland_brass_production
+  username: highland_brass
+  password: <%= ENV['highland_brass_DATABASE_PASSWORD'] %>
+

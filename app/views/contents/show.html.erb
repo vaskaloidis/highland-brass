@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @content.name %>
+</p>
+
+<p>
+  <strong>Prettyname:</strong>
+  <%= @content.prettyName %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @content.content %>
+</p>
+
+<p>
+  <strong>Previouscontent:</strong>
+  <%= @content.previousContent %>
+</p>
+
+<p>
+  <strong>Displaytitle:</strong>
+  <%= @content.displayTitle %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

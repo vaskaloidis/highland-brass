@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Prettyname</th>
+      <th>Content</th>
+      <th>Previouscontent</th>
+      <th>Displaytitle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contents.each do |content| %>
+      <tr>
+        <td><%= content.name %></td>
+        <td><%= content.prettyName %></td>
+        <td><%= content.content %></td>
+        <td><%= content.previousContent %></td>
+        <td><%= content.displayTitle %></td>
+        <td><%= link_to 'Show', content %></td>
+        <td><%= link_to 'Edit', edit_content_path(content) %></td>
+        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Content', new_content_path %>

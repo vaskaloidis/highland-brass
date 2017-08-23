@@ -22,5 +22,5 @@ production:
   <<: *default
   database: highland_brass_production
   username: highland_brass
-  password: <%= ENV['highland_brass_DATABASE_PASSWORD'] %>
+  password: <%= ENV['HIGHLAND_BRASS_DATABASE_PASSWORD'] %>
 
